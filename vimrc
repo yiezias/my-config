@@ -79,7 +79,7 @@ augroup END
 augroup optinit
 	autocmd!
 	autocmd FileType vim,nasm,asm setlocal foldmethod=indent
-	autocmd FileType vim,nasm,c,asm normal zR
+	autocmd FileType vim,nasm,c,cpp,asm normal zR
 	autocmd FileType nasm,asm setlocal autoindent
 	autocmd FileType markdown,html,css,yaml inoremap <buffer> <esc> <esc>:w<cr>
 augroup END
