@@ -103,3 +103,13 @@ function! CheckBackspace() abort
 	return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 "以上配置来自https://github.com/neoclide/coc.nvim/issues/3167#issuecomment-1537082005
+
+if &term =~ "win32"
+	" INSERT mode
+	let &t_SI = "\<Esc>[2 q"
+	" REPLACE mode
+	let &t_SR = "\<Esc>[2 q"
+	" NORMAL mode
+	let &t_EI = "\<Esc>[2 q"
+endif
+" 详见https://learn.microsoft.com/zh-cn/windows/console/console-virtual-terminal-sequences#cursor-shape
